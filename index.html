@@ -13,11 +13,19 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
 
+      :root {
+        --primary: #9250e9;
+        --text: #453c49;
+        --light-text: #81838c;
+
+        --radius: 4px;
+      }
+
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        color: #453c49;
+        color: var(--text);
         line-height: 1.5;
       }
 
@@ -45,13 +53,12 @@
       h4,
       h5,
       h6 {
-        color: #453c49;
         font-weight: 600;
         line-height: 1.1;
       }
 
       p {
-        color: #81838c;
+        color: var(--light-text);
       }
 
       header {
@@ -61,16 +68,23 @@
       }
 
       header .logo {
-        height: 24px;
+        height: 1.5rem;
       }
 
       nav ul {
         list-style-type: none;
       }
 
+      nav li {
+        display: flex;
+      }
+
       header a {
+        line-height: 1;
         text-decoration: none;
         font-size: 0.875rem;
+        padding: 0.5rem;
+        border-radius: var(--radius);
       }
 
       header a:hover {
@@ -107,7 +121,7 @@
 
       form input,
       form button {
-        border-radius: 4px;
+        border-radius: var(--radius);
         padding: 0.5rem;
       }
 
@@ -124,12 +138,12 @@
         box-shadow: rgba(146, 80, 233, 0.4) 0px 0px 6px;
         transition: none;
         outline: none;
-        border-color: #9250e9;
+        border-color: var(--primary);
       }
 
       form button {
         border: none;
-        background: #9250e9;
+        background: var(--primary);
         padding: 0.5em 1.5em;
 
         color: white;
@@ -148,9 +162,9 @@
 
       form button:focus-visible {
         transition: none;
-        background: #3e2164;
+        /* background: #3e2164; */
         outline-offset: 2px;
-        outline: 2px solid #9250e9;
+        outline: 2px solid var(--primary);
       }
 
       @media screen and (min-width: 500px) {
