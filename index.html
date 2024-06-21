@@ -97,7 +97,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 2rem;
+        gap: 6rem;
         max-width: 400px;
         margin: 0 auto;
       }
@@ -167,6 +167,33 @@
         outline: 2px solid var(--primary);
       }
 
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+      }
+
+      .logo-list li {
+        display: flex;
+      }
+
+      .logo-list img {
+        width: 100px;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+
       @media screen and (min-width: 500px) {
         main h1 {
           font-size: 2.5rem;
@@ -189,6 +216,15 @@
         form input {
           flex-basis: 400px;
         }
+
+        section {
+          gap: 1rem;
+        }
+
+        .logo-list {
+          flex-direction: row;
+          gap: 3rem;
+        }
       }
     </style>
   </head>
@@ -207,27 +243,39 @@
     </header>
 
     <main>
-      <h1>Wij bouwen de brug tussen klanten en adviseurs</h1>
-      <p class="subtitle">
-        Het aanvragen van een hypotheek hoeft niet ingewikkeld te zijn. LoanLink
-        is op een missie om dit proces radicaal om te gooien.
-      </p>
+      <section>
+        <h1>Wij bouwen de brug tussen klanten en adviseurs</h1>
+        <p class="subtitle">
+          Het aanvragen van een hypotheek hoeft niet ingewikkeld te zijn.
+          LoanLink is op een missie om dit proces radicaal om te gooien.
+        </p>
 
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input
-          type="hidden"
-          name="access_key"
-          value="2532345d-997f-4d10-891e-3f24923b9203"
-        />
-        <input
-          type="email"
-          name="email"
-          autocomplete="email"
-          placeholder="E-mailadres"
-          required
-        />
-        <button type="submit">Probeer het uit!</button>
-      </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="2532345d-997f-4d10-891e-3f24923b9203"
+          />
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            placeholder="E-mailadres"
+            required
+          />
+          <button type="submit">Probeer het uit!</button>
+        </form>
+      </section>
+      <section>
+        <p>Ons team werkte bij:</p>
+        <ul class="logo-list">
+          <li><img src="./rabobank.svg" alt="Rabobank" /></li>
+          <li><img src="./eigen_huis.svg" alt="Eigen Huis" /></li>
+          <li>
+            <img src="./kpn.svg" alt="KPN" />
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
